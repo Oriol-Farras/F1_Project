@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +22,7 @@
 
         .content {
             flex: 1;
+            padding-top: 120px; /* Ajusta este valor según la altura de la navbar */
         }
 
         .navbar {
@@ -40,7 +42,6 @@
             background: linear-gradient(to right, #1c1c1c, #343a40);
             color: white;
             border-radius: 15px;
-            margin-top: 80px;
         }
         .hero-section h1 {
             font-size: 48px;
@@ -102,7 +103,7 @@
             <div class="col-md-4">
                 <a href="#" class="text-decoration-none text-dark">
                     <div class="category-card">
-                        <img src="https://source.unsplash.com/400x250/?formula1,driver" alt="Pilotos">
+                        <img src="{% static 'piloto2.jpeg' %}" alt="Pilotos">
                         <h3>Pilotos</h3>
                     </div>
                 </a>
@@ -110,7 +111,7 @@
             <div class="col-md-4">
                 <a href="#" class="text-decoration-none text-dark">
                     <div class="category-card">
-                        <img src="https://source.unsplash.com/400x250/?formula1,team" alt="Equipos">
+                        <img src="{% static 'team.jpeg' %}" alt="Equipos">
                         <h3>Equipos</h3>
                     </div>
                 </a>
@@ -118,7 +119,7 @@
             <div class="col-md-4">
                 <a href="#" class="text-decoration-none text-dark">
                     <div class="category-card">
-                        <img src="https://source.unsplash.com/400x250/?formula1,track" alt="Circuitos">
+                        <img src="{% static 'circuito.jpeg' %}" alt="Circuitos">
                         <h3>Circuitos</h3>
                     </div>
                 </a>
