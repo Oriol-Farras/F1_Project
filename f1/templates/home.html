@@ -10,31 +10,22 @@
             background-color: #f8f9fa;
         }
         .navbar {
-            background-color: #343a40;
+            background-color: #212529;
+            padding: 15px;
         }
-        .navbar-brand, .nav-link {
-            color: white !important;
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-link {
+            font-size: 18px;
         }
         .hero-section {
             text-align: center;
             padding: 80px 20px;
-            background: url('https://source.unsplash.com/1600x900/?formula1,race') no-repeat center center/cover;
-            color: white;
-            position: relative;
-        }
-        .hero-section::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-        .hero-content {
-            position: relative;
-            z-index: 1;
         }
         .btn-custom {
-            width: 200px;
+            width: 220px;
             padding: 15px;
             font-size: 18px;
             font-weight: bold;
@@ -42,25 +33,28 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <div class="container d-flex justify-content-between">
-            <a class="navbar-brand" href="#">🏎️ F1 - Home</a>
-            <div>
-                <a class="nav-link d-inline text-white" href="#">Home</a>
-                <a class="nav-link d-inline text-white" href="#">Drivers</a>
-                <a class="nav-link d-inline text-white" href="#">Teams</a>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">F1 Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Pilotos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Equipos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Circuitos</a></li>
+                </ul>
             </div>
         </div>
     </nav>
-    <div class="container-fluid hero-section d-flex align-items-center justify-content-center">
-        <div class="hero-content text-center">
-            <h1 class="mb-3">Welcome to the World of Formula 1</h1>
-            <p class="lead">Explore the latest stats, teams, and drivers in the world’s most exciting motorsport.</p>
-            <div class="d-flex justify-content-center gap-3 mt-4">
-                <a href="#" class="btn btn-danger btn-custom">Drivers</a>
-                <a href="#" class="btn btn-primary btn-custom">Teams</a>
-                <a href="#" class="btn btn-success btn-custom">Circuits</a>
-            </div>
+    <div class="container hero-section">
+        <h1 class="mb-4">Bienvenido al mundo de la Fórmula 1</h1>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="#" class="btn btn-danger btn-custom">Pilotos</a>
+            <a href="#" class="btn btn-primary btn-custom">Equipos</a>
+            <a href="#" class="btn btn-success btn-custom">Circuitos</a>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
