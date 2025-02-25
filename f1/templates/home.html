@@ -10,7 +10,7 @@
             background-color: #f8f9fa;
         }
         .navbar {
-            background-color: #212529;
+            background-color: #1a1a1a !important;
             padding: 15px;
         }
         .navbar-brand {
@@ -22,13 +22,36 @@
         }
         .hero-section {
             text-align: center;
-            padding: 80px 20px;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+            color: white;
+            border-radius: 15px;
+            margin-top: 80px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .hero-section h1 {
+            font-size: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .hero-section p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            opacity: 0.9;
         }
         .btn-custom {
             width: 220px;
             padding: 15px;
             font-size: 18px;
             font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-custom:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3);
         }
     </style>
 </head>
@@ -50,7 +73,8 @@
         </div>
     </nav>
     <div class="container hero-section">
-        <h1 class="mb-4">Bienvenido al mundo de la Fórmula 1</h1>
+        <h1>Bienvenido al mundo de la Fórmula 1</h1>
+        <p>Descubre la velocidad, la emoción y la tecnología de la Fórmula 1. Conoce a los pilotos más talentosos, los equipos más legendarios y los circuitos más icónicos del automovilismo. Vive la experiencia de la F1 al máximo.</p>
         <div class="d-flex justify-content-center gap-3">
             <a href="#" class="btn btn-danger btn-custom">Pilotos</a>
             <a href="#" class="btn btn-primary btn-custom">Equipos</a>
