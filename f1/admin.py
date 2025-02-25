@@ -1,9 +1,6 @@
 from django.contrib import admin
 from .models import Team, Driver, Circuit
 
-admin.site.register(Team)
-admin.site.register(Driver)
-admin.site.register(Circuit)
 
 @admin.register(Team)
 class TeamAdmin(admin.ModelAdmin):
