@@ -33,9 +33,8 @@ class Circuit(models.Model):
     location = models.CharField(max_length=100)
     country = models.CharField(max_length=100)
     date = models.DateField()
-    winner = models.ForeignKey(
-        Driver, on_delete=models.SET_NULL, null=True, blank=True, related_name="wins"
-    )
+    winner = models.ForeignKey(Driver, on_delete=models.SET_NULL, null=True, blank=True, related_name="circuit_wins")
+
 
     def __str__(self):
         return f"{self.name} - {self.date}"
