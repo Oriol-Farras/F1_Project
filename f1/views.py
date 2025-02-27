@@ -1,10 +1,11 @@
 from django.shortcuts import render
-
+from .models import Driver
 def home(request):
     return render(request, "home.html")
 
 def drivers(request):
-    return render(request, 'drivers.html')
+    all_drivers = Driver.objects.all()
+    return render(request, 'drivers.html', {'drivers': all_drivers})
 
 def teams(request):
     return render(request, 'teams.html')

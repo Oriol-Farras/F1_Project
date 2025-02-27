@@ -1,4 +1,31 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block title %}F1 - Drivers{% endblock %}
+
 {% block content %}
-    <h1>Pilotos de F1</h1>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Pilotos de Fórmula 1</h1>
+
+    <div class="row">
+        {% for driver in drivers %}
+        <div class="col-md-4">
+            <div class="category-card">
+                {% if driver.photo %}
+                    <img src="{{ driver.photo.url }}" alt="{{ driver.name }}">
+                {% endif %}
+                <h3>{{ driver.name }}</h3>
+                <p><strong>Número:</strong> {{ driver.number }}</p>
+                <p><strong>Nacionalidad:</strong> {{ driver.nationality }}</p>
+                <p><strong>Equipo:</strong> {{ driver.team.name|default:"Sin equipo" }}</p>
+                <p><strong>Victorias:</strong> {{ driver.wins }}</p>
+                <p><strong>Podios:</strong> {{ driver.podiums }}</p>
+                <p><strong>Poles:</strong> {{ driver.poles }}</p>
+            </div>
+        </div>
+        {% empty %}
+        <p class="text-center">No hay pilotos registrados aún.</p>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
