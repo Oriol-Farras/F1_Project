@@ -17,9 +17,23 @@
                 <img src="{% static 'default_driver.png' %}" alt="No image">
             {% endif %}
             <h3>{{ driver.name }}</h3>
+            <br>
             <p>Equipo: {{ driver.team }}</p>
             <p>Nacionalidad: {{ driver.nationality }}</p>
-            <p>Victorias: {{ driver.wins }}</p>
+            <div class="stats d-flex justify-content-around mt-2">
+                <div class="stat-item text-center">
+                    <strong>{{ driver.wins }}</strong>
+                    <p>Victorias</p>
+                </div>
+                <div class="stat-item text-center">
+                    <strong>{{ driver.podiums }}</strong>
+                    <p>Podios</p>
+                </div>
+                <div class="stat-item text-center">
+                    <strong>{{ driver.poles }}</strong>
+                    <p>Poles</p>
+                </div>
+            </div>
         </div>
     </div>
     {% endfor %}
