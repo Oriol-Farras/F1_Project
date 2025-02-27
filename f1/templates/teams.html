@@ -13,14 +13,12 @@
         <div class="category-card text-center">
             {% if team.logo %}
                 <img src="{{ team.logo.url }}" alt="{{ team.name }}" class="team-logo mb-2">
-            {% else %}
-                <img src="{% static 'default_team.png' %}" alt="No image" class="team-logo mb-2">
             {% endif %}
             <h3>{{ team.name }}</h3>
             <p><strong>Motor:</strong> {{ team.engine }}</p>
             <p><strong>Sede:</strong> {{ team.headquarters }}</p>
             <div class="stats d-flex justify-content-around mt-2">
-                <div class="stat-item text-center">
+                <div class="stat-item text-center championship-box">
                     <strong>{{ team.championships }}</strong>
                     <p>Campeonatos</p>
                 </div>
