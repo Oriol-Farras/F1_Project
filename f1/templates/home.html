@@ -1,70 +1,39 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>F1 - Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="{% url 'home' %}">F1 Inicio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="{% url 'home' %}">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'drivers' %}">Pilotos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'teams' %}">Equipos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'circuits' %}">Circuitos</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <div class="container content">
-        <div class="hero-section">
-            <h1>Explora el mundo de la Fórmula 1</h1>
-            <p>Accede a estadísticas detalladas sobre los pilotos más talentosos, los equipos más icónicos y los circuitos legendarios de la máxima categoría del automovilismo.</p>
-        </div>
+{% block title %}F1 - Home{% endblock %}
+{% block body_class %}home-page{% endblock %}
 
-        <div class="row text-center mt-5">
-            <div class="col-md-4">
-                <a href="{% url 'drivers' %}" class="text-decoration-none text-dark">
-                    <div class="category-card">
-                        <img src="{% static 'piloto2.jpeg' %}" alt="Pilotos">
-                        <h3>Pilotos</h3>
-                    </div>
-                </a>
+{% block content %}
+<div class="hero-section">
+    <h1>Explora el mundo de la Fórmula 1</h1>
+    <p>Accede a estadísticas detalladas sobre los pilotos más talentosos, los equipos más icónicos y los circuitos legendarios de la máxima categoría del automovilismo.</p>
+</div>
+
+<div class="row text-center mt-5">
+    <div class="col-md-4">
+        <a href="{% url 'drivers' %}" class="text-decoration-none text-dark">
+            <div class="category-card">
+                <img src="{% static 'piloto2.jpeg' %}" alt="Pilotos">
+                <h3>Pilotos</h3>
             </div>
-            <div class="col-md-4">
-                <a href="{% url 'teams' %}" class="text-decoration-none text-dark">
-                    <div class="category-card">
-                        <img src="{% static 'team.jpeg' %}" alt="Equipos">
-                        <h3>Equipos</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="{% url 'circuits' %}" class="text-decoration-none text-dark">
-                    <div class="category-card">
-                        <img src="{% static 'circuito.jpeg' %}" alt="Circuitos">
-                        <h3>Circuitos</h3>
-                    </div>
-                </a>
-            </div>
-        </div>
+        </a>
     </div>
-
-    <footer>
-        <p>&copy; 2025 F1 Stats | Todos los derechos reservados.</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{% static 'scripts.js' %}"></script>
-</body>
-</html>
+    <div class="col-md-4">
+        <a href="{% url 'teams' %}" class="text-decoration-none text-dark">
+            <div class="category-card">
+                <img src="{% static 'team.jpeg' %}" alt="Equipos">
+                <h3>Equipos</h3>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="{% url 'circuits' %}" class="text-decoration-none text-dark">
+            <div class="category-card">
+                <img src="{% static 'circuito.jpeg' %}" alt="Circuitos">
+                <h3>Circuitos</h3>
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock %}
