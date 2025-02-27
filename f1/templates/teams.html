@@ -1,19 +1,4 @@
-{% load static %}
-{% include 'navbar.html' %}
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Equipos - F1</title>
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-</head>
-<body>
-    {% include 'navbar.html' %}
-    <div class="container content">
-        <h1 class="text-center">Equipos de Fórmula 1</h1>
-        <p class="text-center">Aquí encontrarás información sobre los equipos de la F1.</p>
-    </div>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Equipos de F1</h1>
+{% endblock %}
