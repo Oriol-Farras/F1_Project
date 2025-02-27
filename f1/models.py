@@ -34,7 +34,7 @@ class Circuit(models.Model):
     country = models.CharField(max_length=100)
     date = models.DateField()
     winner = models.ForeignKey(Driver, on_delete=models.SET_NULL, null=True, blank=True, related_name="circuit_wins")
-
+    image = models.ImageField(upload_to="circuit_images/", null=True, blank=True)
 
     def __str__(self):
         return f"{self.name} - {self.date}"

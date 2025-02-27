@@ -14,7 +14,7 @@ class DriverAdmin(admin.ModelAdmin):
     search_fields = ("name", "team__name")
     list_filter = ("team", "nationality")
 
-@admin.register(Circuit)
+@admin.register(Circuit)  # Ya está registrado correctamente aquí
 class CircuitAdmin(admin.ModelAdmin):
     list_display = ("name", "location", "date", "winner")
     search_fields = ("name", "location")
