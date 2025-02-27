@@ -41,6 +41,10 @@ html, body {
     margin: 20px auto;
 }
 
+.team-logo {
+    width: 100px;
+    height: auto;
+}
 
 
 .category-card {
