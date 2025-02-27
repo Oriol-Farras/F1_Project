@@ -26,9 +26,15 @@ html, body {
     background-color: #f1f4f6;
     padding: 10px;
     border-radius: 8px;
-
     text-align: center;
+    width: 120px; /* Ajusta según el diseño */
+    min-height: 70px; /* Mantiene consistencia */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .hero-section {
     text-align: center;
