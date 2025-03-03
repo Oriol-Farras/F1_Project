@@ -68,7 +68,14 @@ html, body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
+
+.col-md-4 {
+    padding: 10px; /* Espacio entre columnas */
+}
+
+
 
 .category-card:hover {
     transform: translateY(-5px);
@@ -80,10 +87,9 @@ html, body {
     border-radius: 10px;
 }
 
-.category-card h3 {
-    margin-top: 15px;
-    font-size: 24px;
-    font-weight: bold;
+.category-card > h3 {
+    font-size: 18px !important;
+    /*font-weight: bold;*/
 }
 
 footer {

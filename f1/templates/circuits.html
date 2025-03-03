@@ -6,18 +6,21 @@
     <br>
     <div class="row">
         {% for circuit in circuits %}
-        <div class="col-md-4">
+        <div class="col-md-4 mb-4">
             <div class="category-card">
                 {% if circuit.image %}
                     <img src="{{ circuit.image.url }}" alt="{{ circuit.name }}">
+                    <br><br>
                 {% endif %}
-                <h3>{{ circuit.name }}</h3>
+
+                <h3 style="font-size: 22px;">{{ circuit.name }}</h3>
+                <br>
                 <p><strong>Ubicación:</strong> {{ circuit.location }}, {{ circuit.country }}</p>
                 <p><strong>Fecha:</strong> {{ circuit.date }}</p>
                 {% if circuit.winner %}
-                    <p><strong>Último ganador:</strong> {{ circuit.winner.name }}</p>
+                    <p><strong>Ganador:</strong> {{ circuit.winner.name }}</p>
                 {% else %}
-                    <p><strong>Último ganador:</strong> No disponible</p>
+                    <p><strong>Ganador:</strong> No disponible</p>
                 {% endif %}
             </div>
         </div>

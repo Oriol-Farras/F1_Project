@@ -13,8 +13,9 @@
         <div class="category-card">
             {% if driver.photo %}
                 <img src="{{ driver.photo.url }}" alt="{{ driver.name }}">
+                <br><br>
             {% endif %}
-            <h3>{{ driver.name }}</h3>
+            <h3 style="font-size: 22px;">{{ driver.name }}</h3>
             <br>
             <p><strong>Equipo:</strong> {{ driver.team }}</p>
             <p><strong>Nacionalidad:</strong> {{ driver.nationality }}</p>
