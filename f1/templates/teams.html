@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}F1 - Equipos{% endblock %}
+{% block body_class %}teams-page{% endblock %}
+
+{% block content %}
+<h1 class="text-center">Equipos de F1</h1>
+<br>
+<div class="row">
+    {% for team in teams %}
+    <div class="col-md-4 mb-4">
+        <div class="category-card text-center">
+            {% if team.logo %}
+                <img src="{{ team.logo.url }}" alt="{{ team.name }}" class="team-logo mb-2">
+                <br><br>
+            {% endif %}
+            <h3 style="font-size: 22px;">{{ team.name }}</h3>
+            <br>
+            <p><strong>Motor:</strong> {{ team.engine }}</p>
+            <p><strong>Sede:</strong> {{ team.headquarters }}</p>
+            <div class="stats d-flex justify-content-around mt-2">
+                <div class="stat-item text-center championship-box">
+                    <strong>{{ team.championships }}</strong>
+                    <p>Campeonatos</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

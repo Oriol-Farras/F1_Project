@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}F1 - Home{% endblock %}
+{% block body_class %}home-page{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <h1>Explora el mundo de la Fórmula 1</h1>
+    <p>Accede a estadísticas detalladas sobre los pilotos más talentosos, los equipos más icónicos y los circuitos legendarios de la máxima categoría del automovilismo.</p>
+</div>
+
+<div class="row text-center mt-5">
+    <div class="col-md-4">
+        <a href="{% url 'drivers' %}" class="text-decoration-none text-dark">
+            <div class="category-card">
+                <img src="{% static 'piloto2.jpeg' %}" alt="Pilotos">
+                <br><br>
+                <h3 style="font-size: 25px;">Pilotos</h3>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="{% url 'teams' %}" class="text-decoration-none text-dark">
+            <div class="category-card">
+                <img src="{% static 'team.jpeg' %}" alt="Equipos">
+                <br><br>
+                <h3 style="font-size: 25px;">Equipos</h3>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="{% url 'circuits' %}" class="text-decoration-none text-dark">
+            <div class="category-card">
+                <img src="{% static 'circuito.jpeg' %}" alt="Circuitos">
+                <br><br>
+                <h3 style="font-size: 25px;">Circuitos</h3>
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock %}

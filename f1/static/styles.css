@@ -1,0 +1,101 @@
+html, body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+    color: #212529;
+}
+
+.content {
+    padding-top: 120px;
+}
+
+.navbar {
+    background-color: #1c1c1c;
+    padding: 15px;
+}
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+.nav-link {
+    font-size: 18px;
+}
+
+.championship-box {
+    background-color: #f1f4f6;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    width: 120px; /* Ajusta según el diseño */
+    min-height: 70px; /* Mantiene consistencia */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero-section {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to right, #1c1c1c, #343a40);
+    color: white;
+    border-radius: 15px;
+
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+.hero-section p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.team-logo {
+    width: 100px;
+    height: auto;
+}
+
+
+.category-card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.col-md-4 {
+    padding: 10px; /* Espacio entre columnas */
+}
+
+
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.category-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.category-card > h3 {
+    font-size: 18px !important;
+    /*font-weight: bold;*/
+}
+
+footer {
+    background-color: #1c1c1c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
