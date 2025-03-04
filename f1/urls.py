@@ -1,10 +1,9 @@
-from django.urls import path
-from . import views
+"""URL configuration for the F1 Django application."""
+
 from django.conf import settings
 from django.conf.urls.static import static
-
-
-
+from django.urls import path
+from . import views
 
 urlpatterns = [
     path('', views.home, name='home'),
